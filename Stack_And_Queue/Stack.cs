@@ -27,10 +27,45 @@ namespace Stack_And_Queue
             }
         }
 
+        public int Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return 0;
+            }
+            else
+            {
+                Console.WriteLine("{0} node is topmost element", top.data);
+                return top.data;
+            }
+        }
+
+        public void Pop()
+        {
+            if (top == null)
+                Console.WriteLine("Stack is empty");
+            else
+            {
+                int delData = Peek();
+                top = top.next;
+                Console.WriteLine("{0} is deleted\n", delData);
+            }
+        }
+
+        public void IsEmpty()
+        {
+            if (top == null)
+                Console.WriteLine("Stack is empty");
+
+            while (top != null)
+                Pop();
+        }
+
         public void Display()
         {
             if (top == null)
-                Console.WriteLine("No elements are present");
+                Console.WriteLine("Stack is empty");
             else
             {
                 Node temp = top;
