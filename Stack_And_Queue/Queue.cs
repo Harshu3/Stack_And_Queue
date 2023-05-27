@@ -28,12 +28,26 @@ namespace Stack_And_Queue
             Console.WriteLine("{0} is added to queue", node.data);
         }
 
+        public void Dequeue()
+        {
+            while (top != null)
+            {
+                Node temp = top.next;
+                Console.WriteLine($"Deleting element: {top.data}");
+                top = top.next;
+                Display();
+            }
+        }
+
         public void Display()
         {
             Node temp = top;
 
-            if (temp == null)
-                Console.WriteLine("Queue is empty");
+            if (top == null)
+            {
+                Console.WriteLine("\nQueue is empty");
+                return;
+            }
 
             Console.WriteLine("\nDisplaying queue elements");
             while (temp != null)

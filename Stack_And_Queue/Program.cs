@@ -8,12 +8,13 @@ namespace Stack_And_Queue
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure Program!");
-            Console.WriteLine("Program to create a Simple Queue!\n");
+            Console.WriteLine("Program to Dequeue elements from Queue!\n");
             Queue queue = new Queue();
             queue.Enqueue(56);
             queue.Enqueue(30);
             queue.Enqueue(70);
             queue.Display();
+            queue.Dequeue();
         }
     }
 }
