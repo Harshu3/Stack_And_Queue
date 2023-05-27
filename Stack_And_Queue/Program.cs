@@ -8,15 +8,12 @@ namespace Stack_And_Queue
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure Program!");
-            Console.WriteLine("Program to Peek and Pop from Stack till it is empty!\n");
-            Stack st = new Stack();
-            st.Push(70);
-            st.Push(30);
-            st.Push(56);
-            st.Display();
-            Console.WriteLine("\nRemoving all elements till stack is empty\n");
-            st.IsEmpty();
-            st.Display();
+            Console.WriteLine("Program to create a Simple Queue!\n");
+            Queue queue = new Queue();
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            queue.Display();
         }
     }
 }
